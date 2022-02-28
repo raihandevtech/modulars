@@ -1,3 +1,25 @@
+// HEADER NAV MENU
+const openNavMenu = document.querySelector(".open-nav-menu"),
+  closeNavMenu = document.querySelector(".close-nav-menu"),
+  navMenu = document.querySelector(".nav-menu");
+
+openNavMenu.addEventListener("click", openMenu);
+closeNavMenu.addEventListener("click", closeMenu);
+
+function openMenu() {
+  if (navMenu.classList.contains("open")) {
+    navMenu.classList.remove("open");
+    navMenu.classList.add("hide");
+  } else {
+    navMenu.classList.add("open");
+    navMenu.classList.remove("hide");
+  }
+}
+function closeMenu() {
+  navMenu.classList.remove("open");
+  navMenu.classList.add("hide");
+}
+
 // SWIPER SLIDER
 
 var swiper = new Swiper(".mySwiper", {
@@ -16,11 +38,7 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    480: {
-      slidesPerView: 1.5,
-      spaceBetween: 20,
-    },
-    600: {
+    641: {
       slidesPerView: 2,
       spaceBetween: 16,
     },
